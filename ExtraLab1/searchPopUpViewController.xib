@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="searchPopUpViewController" customModule="ExtraLab1" customModuleProvider="target">
+            <connections>
+                <outlet property="TGR" destination="QZ1-3o-bU5" id="eNq-CN-8zY"/>
+                <outlet property="normalView" destination="xlC-Os-Rp5" id="59F-Yx-ChI"/>
+                <outlet property="tableView" destination="LfU-eB-nml" id="afv-1M-87U"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tapGestureRecognizer id="QZ1-3o-bU5">
+            <connections>
+                <action selector="dismissView:" destination="-1" id="DdF-VI-VOH"/>
+            </connections>
+        </tapGestureRecognizer>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlC-Os-Rp5">
+                    <rect key="frame" x="30" y="233.99999999999997" width="333" height="384.33333333333326"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜尋結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEE-Yh-Ykd">
+                            <rect key="frame" x="123.66666666666666" y="18" width="85.666666666666657" height="25.333333333333329"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LfU-eB-nml">
+                            <rect key="frame" x="15" y="53.333333333333314" width="303" height="316"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="316" id="VqS-ZT-FeK"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="NBK-AF-J7n"/>
+                                <outlet property="delegate" destination="-1" id="ozN-3M-OlU"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="LfU-eB-nml" secondAttribute="bottom" constant="15" id="5h9-QQ-miV"/>
+                        <constraint firstItem="LfU-eB-nml" firstAttribute="leading" secondItem="xlC-Os-Rp5" secondAttribute="leading" constant="15" id="DY7-Q1-7Ao"/>
+                        <constraint firstItem="LEE-Yh-Ykd" firstAttribute="centerX" secondItem="xlC-Os-Rp5" secondAttribute="centerX" id="Kk0-ti-1gu"/>
+                        <constraint firstItem="LfU-eB-nml" firstAttribute="top" secondItem="LEE-Yh-Ykd" secondAttribute="bottom" constant="10" id="NP0-vk-o9T"/>
+                        <constraint firstItem="LEE-Yh-Ykd" firstAttribute="top" secondItem="xlC-Os-Rp5" secondAttribute="top" constant="18" id="d5e-Qj-gqG"/>
+                        <constraint firstItem="LfU-eB-nml" firstAttribute="centerX" secondItem="xlC-Os-Rp5" secondAttribute="centerX" id="h5y-zN-jHE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="0.70317673841059603" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="xlC-Os-Rp5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cwi-Pa-YtC"/>
+                <constraint firstItem="xlC-Os-Rp5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MOJ-JI-pDt"/>
+                <constraint firstItem="xlC-Os-Rp5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="vH2-31-zmc"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="QZ1-3o-bU5" appends="YES" id="Y7q-BT-KOr"/>
+            </connections>
+            <point key="canvasLocation" x="130.53435114503816" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
